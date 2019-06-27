@@ -1,0 +1,95 @@
+baseurl = "https://nerthus-foundation-ltd/website.git" 
+languageCode = "zh-cn"
+title = "Nerthus Document"
+theme = "material"
+metadataformat = "yaml"
+enableEmoji = true
+canonifyurls = true
+# Set the unicode character used for the "return" link in page footnotes.
+footnotereturnlinkcontents = "↩"
+# When enabled, creates URL on the form /filename.html instead of /filename/.
+uglyURLs = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+pluralizeListTitles = false
+
+# 启用rebots
+enableRobotsTXT = false 
+
+# 启用 Git
+enableGitInfo = false 
+# user pygment and 
+pygmentsUseClassic = true 
+pygmentsuseclasses = true
+# Highlighting config (Pygments)
+PygmentsCodeFences = true
+pygmentsstyle = "friendly" 
+
+[params]
+	# General information
+	author = "nerthus team"
+	description = "nerthus blockchain document"
+	copyright = ""
+
+	# Repository
+	provider = "github"
+	repo_name = "nerthus-foundation-ltd/website"
+	repo_url = "https://github.com/nerthus-foundation-ltd/website"
+
+	version = "1.0.0" 
+	icon = ""
+	favicon = ""
+
+	# Permanent link char , Default "¶" 
+	permalink = ""
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	# Material supports both, left-to-right (ltr) and right-to-left (rtl) text direction, Default "ltr"
+	direction = ""
+	
+	[params.plugins]
+		search = true
+		link  = false # 连接到原文件
+	[params.palette]
+		# red, pink, purple, deep purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey and blue-grey. 
+    	primary = "light-gren"
+    	accent  = "indigo"
+
+    [params.font]
+		useimage = true 
+    	text = 'sans-serif'
+    	code = "Ubuntu Mono"
+	
+	[params.theme.feature]
+		tabs = true
+
+# MARKDOWN
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+	plainIDAnchors = true
+  # See https://github.com/gohugoio/hugo/issues/2424
+	hrefTargetBlank = false
+  	angledQuotes = false
+  	latexDashes = true
+[imaging]
+# See https://github.com/disintegration/imaging
+# CatmullRom is a sharp bicubic filter which should fit the docs site well with its many screenshots.
+# Note that you can also set this per image processing.
+resampleFilter = "CatmullRom"
+
+# Defatult JPEG quality setting. Default is 75.
+quality = 75
+
+anchor = "smart"
+
+[[menu.docs]]
+    name = "快速开始"
+	url = "/start.html"
+	identifier ="start"
+	weight = 1
